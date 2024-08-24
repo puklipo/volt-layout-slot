@@ -13,6 +13,7 @@ use function Livewire\Volt\state;
 layout('layouts.guest');
 
 state([
+    'data' => 'test',
     'name' => '',
     'email' => '',
     'password' => '',
@@ -38,6 +39,7 @@ $register = function () {
 };
 
 ?>
+<x-slot:data>{{ $data }}</x-slot:data>
 
 <div>
     <form wire:submit="register">
